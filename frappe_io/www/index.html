@@ -1,0 +1,86 @@
+{% extends "templates/base.html" %}
+{% block title %}Frappe: Frameworks + Apps{% endblock %}
+{% block content %}
+<!-- <section class='section-padding splash'
+	style='background-image: url(/assets/frappe_io/images/landing-pages/get-doc.png)'>
+</section> -->
+<section class="top-section">
+	<div class='container'>
+	<h1>Frameworks + Apps</h1>
+	<p class='lead'>We are a Mumbai based software engineering company that builds open source frameworks, applications and libraries.</p>
+
+{% macro card(title, body, btnlabel, btnlink, badges) %}
+<div class="col-sm mb-4 text-left">
+	<a href="{{ btnlink }}" class="card h-100">
+	  <div class="card-body">
+		<h5>{{ title }}</h5>
+	    <div class="card-text">{{ body }}</div>
+	    <!-- <a href="{{ btnlink }}" class="btn btn-dark btn-sm">{{ btnlabel }}</a> -->
+	  </div>
+	</a>
+</div>
+{% endmacro %}
+	<div class="row mt-5">
+		{{ card(
+			"ERPNext",
+			"Fully featured, modern, easy-to-use 100% Open Source ERP.",
+			"ERPNext.com",
+			"/erpnext",
+			["App", "Python", "JS"]
+		) }}
+
+		{{ card(
+			"Frappe",
+			"Python + JS based metadata driven, full-stack web-application framework.",
+			"Documentation",
+			"/frappe",
+			["Framework", "Python", "JS"]
+		) }}
+
+		{{ card(
+			"Bench",
+			"CLI to setup, deploy, manage multiple Frappe / ERPNext instances.",
+			"ERPNext.com",
+			"/bench",
+			["CLI", "Python"]
+		) }}
+	</div>
+
+	<div class="row">
+		{{ card(
+			"Gantt",
+			"Open source, fully featured, SVG based Javascript Gantt library.",
+			"ERPNext.com",
+			"/gantt",
+			["Lib", "JS"]
+		) }}
+
+		{{ card(
+			"Charts",
+			"Open source, extensible, GitHub inspired SVG based Charting library.",
+			"ERPNext.com",
+			"/charts",
+			["Lib", "JS"]
+		) }}
+
+		{{ card(
+			"DataTable",
+			"Missing open source Javascript based Datatable built for the web.",
+			"ERPNext.com",
+			"/datatable",
+			["Lib", "JS"]
+		) }}
+	</div>
+	</div>
+
+</section>
+<section class='section-padding text-center section-bg'>
+	<div class='container'>
+		<h3>A Community, Not Just a Company</h3>
+		<p class='lead'>At Frappe, we are true believers of Open Source and actively work with communities to share our knowledge.</p>
+		<img src='/assets/frappe_io/images/hackathon.jpg' class='greyscale mt-5'>
+		<p class='mt-5 lead text-muted'>We are always looking for great people to join our team</p>
+		<a class='btn btn-dark mt-4' href='/jobs'>Apply for a Job</a>
+	</div>
+</section>
+{% endblock %}
